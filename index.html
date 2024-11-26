@@ -3,73 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Interactive Resume</title>
+    <title>Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="resume-container">
-        <!--Left Section-->
-         <div class="left-section">
-        <img src="Profile picture (1).png" alt="Profile picture" class="profile-picture">
-        <section id="objective">
-            <h3 style="color: white;">Career Objective</h3>
-            <p style="text-align: justify;hyphens: auto;">To secure an employment opportunity with a progressive organisation, where I can utilize my professional skills and knowledge to the maximum add value in the growth of the organization.</p>
-        </section>
+    <h1>Dynamic Resume Builder </h1>
+    <form id="Resumeform">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br><br>
 
-        <section id="certification">
-            <h3 style="color: white;">Certification</h3>
-            <p><b>CIT:</b> From Technomen Computer Institute</p>
-            <p><b>Artificial Intelligence, Web 3.0 & Metavers:</b> From Governor House Karachi(Ongoing)</p>
-        </section>
-   </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required><br><br>
 
-    <!--Right Section-->
+            <label for="Phone">Phone:</label>
+            <input type="tel" id="Phone" placeholder="Enter your phone number" required><br><br>
 
-     <div class="right-section">
-        <h1>Static Interactive Resume</h1>
-        <!-- Personal Information-->
-         <section id="personal-info">
-            <h3>Personal Information</h3>
-            <p><b>Name:</b>Zareen Arif</p>
-            <p><b>Phone:</b>0332-2286886</p>
-            <p><b>Email:</b><a href="mailto:zarfeen.zareen@gmail.com">zarfeen.zareen@gmail.com</a></p>
-            <p><b>LinkedIn:</b><a href="https://www.linkedin.com/in/zarfeen-zarfeen-65198a2ba" target="_blank">www.LinkedIn.com</a></p>
-         </section>
 
-         <!-- Education Section -->
-          <section id="education">
-            <h3>Education</h3>
-            <p><b>Masters:</b>MSc in Statistic From University of Karachi</p>
-            <p><b>Bachelors::</b>BSc Honours in Statistic From University of Karachi</p>
-            <p><b>Intermediate:</b>HSC in Science From St.Patrick's Govt.College</p>
-            <p><b>Matriculation:</b>SSC in Science From The Initiator's Grammer School</p>
-          </section>
+        </fieldset>
+<!--Education-->
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education</label>
+            <textarea id="education" placeholder="Enter your education" rows="4" required></textarea>
+            
+        </fieldset>
+<!--Experience-->
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea id="experience" placeholder="Enter your experienc" rows="5" required></textarea>
+            
+        </fieldset>
+ <!--Skills-->
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="Skills">Skills</label>
+            <textarea id="Skills" placeholder="Enter your skills" rows="4" required></textarea><br>
 
-          <!-- Skills Section -->
+            
+        </fieldset>
+<br>
+        <button type="submit"> Generate Resume </button>
+    </form>
+    <br>
+    <!-- Dynamic Resume -->
+     <div id="resume-display">
+        <!-- Resume will be genrated below -->
+     </div>
 
-          <section id="skills">
-            <h3>Skills</h3>
-            <ul>
-                <li>Statistical Analysis</li>
-            <li>Ms office</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Typescript</li>
-            </ul>
-          </section> 
+     <script src="script.js"></script>
 
-          <!-- Work Experience Section -->
-           <section id="work-experience">
-            <h3>Work Experience</h3>
-            <p><b>Company:</b> Lakson Tobacco Company Limited.</p>
-            <p><b>Role:</b>Internship in the Quality Assurance(CASL) Department as a QA Officer</p>
-
-           </section>
-
-           <!-- Button to toggle Skills Section -->
-             <button id="toggle-skills"><b>Hide/Show Skills</b></button>
-       </div>
-    </div>
-    <script src="script.js"></script>
 </body>
 </html>
